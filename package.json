@@ -1,0 +1,22 @@
+{
+  "name": "morning_website",
+  "version": "1.0.0",
+  "description": "A website to display information I want for my morning commute",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daferoli/morning_website.git"
+  },
+  "author": "David_Feroli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daferoli/morning_website/issues"
+  },
+  "homepage": "https://github.com/daferoli/morning_website",
+  "dependencies": {
+    "forecast": "^0.2.1"
+  }
+}
