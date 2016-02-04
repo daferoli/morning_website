@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/daferoli/morning_website",
   "dependencies": {
+    "csv": "^0.4.6",
     "forecast": "^0.2.1"
   }
 }
