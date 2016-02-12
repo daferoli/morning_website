@@ -7,4 +7,4 @@ weather.getTemp(function(temps){
     "\nHigh: " + temps.high);
 });
 
-trains.getTrainTimes(3,8,function(timesArrray){console.log(timesArrray)});
+trains.getTrainTimes(3,8,function(timesArrray){console.log(timesArrray);});
