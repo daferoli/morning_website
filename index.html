@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Morning Site</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="main-controller.js"></script>
+  </head>
+
+  <body>
+
+    <div ng-app="morning-site">
+      <div ng-controller="MainController">
+        <p>Hello and welcome to My Morning Site!</p>
+        <p id="temps">{{ temperature }}</p>
+        <p id="times">{{ trainTimes }}</p>
+        <p id="updated">Last updated: {{ updateTime }}</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -3,7 +3,7 @@ var trains = require('./lib/lightrail_service');
 var express = require('express');
 var fs = require('fs');
 
-var welcome = fs.readFileSync('welcome.html');
+var index = fs.readFileSync('index.html');
 var app = express();
 
 app.get('/temps',function(req,res){
@@ -18,8 +18,10 @@ app.get('/trains', function(req,res){
   });
 });
 
+app.use(express.static(__dirname + '/app'));
+
 app.get('/', function(req,res){
-  res.end(welcome);
+  res.sendFile(req.path, {root: __dirname });
 });
 
 app.listen(8081, function(){
