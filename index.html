@@ -10,8 +10,15 @@
     <div ng-app="morning-site">
       <div ng-controller="MainController">
         <p>Hello and welcome to My Morning Site!</p>
-        <p id="temps">{{ temperature }}</p>
-        <p id="times">{{ trainTimes }}</p>
+        <div id="temps">
+          <p>Current Temperature: {{ currTemp }}</p>
+          <p>High Temperature: {{highTemp}}</p>
+          <p>Low Temperature: {{lowTemp}}</p>
+        </div>
+        <p id="times">Next Train Times:</p>
+        <ul ng-repeat="time in trainTimes">
+          <li>{{time}}</li>
+        </ul>
         <p id="updated">Last updated: {{ updateTime }}</p>
       </div>
     </div>

@@ -3,13 +3,13 @@ var myApp = angular.module('morning-site', []);
 myApp.controller('MainController',function($scope,$http,$interval){
   function getData(){
     $http.get('http://localhost:8081/trains').success(function(data){
-      console.log("Executed trains");
       $scope.trainTimes = data;
     });
 
     $http.get('http://localhost:8081/temps').success(function(data){
-      console.log("Executed temperature");
-      $scope.temperature = data;
+      $scope.currTemp = data.currently;
+      $scope.highTemp = data.high;
+      $scope.lowTemp = data.low;
     });
 
     var currTime = new Date();
