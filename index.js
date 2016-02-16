@@ -13,7 +13,7 @@ app.get('/temps',function(req,res){
 });
 
 app.get('/trains', function(req,res){
-  trains.getTrainTimes(8,8,function(timesArray){
+  trains.getTrainTimes(5,8,function(timesArray){
     res.send(timesArray);
   });
 });

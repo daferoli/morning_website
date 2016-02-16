@@ -3,22 +3,44 @@
     <title>Morning Site</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="main-controller.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="css/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style>
+      #temps{
+        font-size: 30px;
+        line-height: 2;
+      }
+      table{
+        font-size: 22px;
+      }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
-  <body>
+  <body style="background-color:#aebec1">
 
     <div ng-app="morning-site">
       <div ng-controller="MainController">
-        <p>Hello and welcome to My Morning Site!</p>
+        <h2>Hello and Welcome to My Morning Site!</h2>
+
         <div id="temps">
-          <p>Current Temperature: {{ currTemp }}</p>
-          <p>High Temperature: {{highTemp}}</p>
-          <p>Low Temperature: {{lowTemp}}</p>
+          <div class="text-center">Current Temperature: {{currTemp}}</div>
+          <div class="text-center">High: {{highTemp}} Low: {{lowTemp}}</div>
         </div>
-        <p id="times">Next Train Times:</p>
-        <ul ng-repeat="time in trainTimes">
-          <li>{{time}}</li>
-        </ul>
+
+        <table class="table table-striped">
+          <thead>
+            <tr><th>Next Train Times:</th></tr>
+          </thead>
+          <tbody ng-repeat="time in trainTimes">
+            <tr>
+              <td class="text-center"><p class="text-center"><b>{{time}}</b></p></td>
+            </tr>
+          </tbody>
+        </table>
+
         <p id="updated">Last updated: {{ updateTime }}</p>
       </div>
     </div>

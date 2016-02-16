@@ -12,8 +12,10 @@ myApp.controller('MainController',function($scope,$http,$interval){
       $scope.lowTemp = data.low;
     });
 
+    //I'm being lazy with the update time and assuming
+    //the user knows if it's AM or PM
     var currTime = new Date();
-    var currMin = currTime.getMinutes < 10 ? "0" + currTime.getMinutes() : currTime.getMinutes();
+    var currMin = currTime.getMinutes() < 10 ? "0" + currTime.getMinutes() : currTime.getMinutes();
     var currHours = currTime.getHours() > 13 ? currTime.getHours() - 12 : currTime.getHours();
     $scope.updateTime = currHours + ":"  + currMin;
   }
