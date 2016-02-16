@@ -44,6 +44,7 @@ lightrail.getTrainTimes = function(next_times, stop_number, cb){
 //next_times is the number of subsequent stops at that particular station
 //stop_number is the number of the stop that the times will be returned for.
 //file_string is what file will be read from(weekday,saturday,sunday)
+//TODO: make cutoff around 3AM. Currently will switch to the next day after midnight
 function readTrainTimesFromCSV(next_times, stop_number, file_string, cb){
   fs.readFile(file_string, function(err, file){
     if(err){

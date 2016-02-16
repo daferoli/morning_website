@@ -1,9 +1,9 @@
-var weather = require('./lib/forecast_service');
-var trains = require('./lib/lightrail_service');
+var weather = require('./services/forecast_service');
+var trains = require('./services/lightrail_service');
 var express = require('express');
 var fs = require('fs');
 
-var index = fs.readFileSync('index.html');
+var index = fs.readFileSync('./app/index.html');
 var app = express();
 
 app.get('/temps',function(req,res){
