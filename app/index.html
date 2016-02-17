@@ -25,9 +25,12 @@
       <div ng-controller="MainController">
         <h2>Hello and Welcome to My Morning Site!</h2>
 
-        <div id="temps">
-          <div class="text-center">Current Temperature: {{currTemp}}</div>
-          <div class="text-center">High: {{highTemp}} Low: {{lowTemp}}</div>
+        <div class="row">
+          <div id="temps">
+            <div class="text-center">Current Temperature: {{currTemp}}</div>
+            <div class="text-center">High: {{highTemp}} Low: {{lowTemp}}</div>
+          </div>
+          <img ng-src="{{myGifPath}}">
         </div>
 
         <table class="table table-striped">

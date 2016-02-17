@@ -1,5 +1,6 @@
 var weather = require('./services/forecast_service');
 var trains = require('./services/lightrail_service');
+var traffic = require('./services/traffic_service');
 var express = require('express');
 var fs = require('fs');
 
@@ -15,6 +16,12 @@ app.get('/temps',function(req,res){
 app.get('/trains', function(req,res){
   trains.getTrainTimes(5,8,function(timesArray){
     res.send(timesArray);
+  });
+});
+
+app.get('/traffic', function(req,res){
+  traffic.getMap(function(result){
+    res.end();
   });
 });
 

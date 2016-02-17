@@ -11,7 +11,7 @@ var weather;
 var forecast_service = function(){
   forecast = new Forecast({
     service: 'forecast.io',
-    key: strings.apiKey,//Replace this with your API Key.
+    key: strings.forecastKey,//Replace this with your API Key.
     units: 'F', // Only the first letter is parsed
     cache: true,      // Cache API requests?
     ttl: {            // How long to cache requests. Uses syntax from moment.js: http://momentjs.com/docs/#/durations/creating/

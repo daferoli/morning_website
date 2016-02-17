@@ -12,6 +12,10 @@ myApp.controller('MainController',function($scope,$http,$interval){
       $scope.lowTemp = data.low;
     });
 
+    $scope.myGifPath="/data/loading.gif";
+    $http.get('http://localhost:8081/traffic').success(function(result){
+      $scope.myGifPath="/data/charlotte.gif";
+    });
     //I'm being lazy with the update time and assuming
     //the user knows if it's AM or PM
     var currTime = new Date();
